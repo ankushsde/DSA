@@ -32,3 +32,33 @@ int main() {
 
     return 0;
 }
+
+// My code
+#include <bits/stdc++.h>
+#include <vector>
+
+using namespace std;
+
+int main() {
+    vector<int> arr = {40,20,43,25,6,21,3};
+    int n = arr.size();
+    for(int i = 0 ; i< n-1; i++){
+    int mini = i;
+    for(int j = i; j<n; j++ ){
+     if(arr[j]<arr[mini]){
+      mini = j;
+     }
+    }
+    int temp = arr[mini];
+    arr[mini] = arr[i];
+    arr[i]= temp;
+    }
+
+    for(int i = 0; i<n; i++){
+     cout<<arr[i]<<" ";
+    }
+
+
+    return 0;
+}
+
